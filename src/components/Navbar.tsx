@@ -3,6 +3,7 @@ import React from "react";
 import Menu from "./Menu";
 import CartIcon from "./CartIcon";
 import Image from "next/image";
+import UserLinks from "./UserLinks";
 
 const Navbar = () => {
   const user = false;
@@ -32,11 +33,7 @@ const Navbar = () => {
           <Image src="/phone.png" alt="phone" width={20} height={20} />
           <span>123-456-7890</span>
         </div>
-        {!user ? (
-          <Link href="/login">Login</Link>
-        ) : (
-          <Link href="/orders">Orders</Link>
-        )}
+        <UserLinks />
         <CartIcon />
       </div>
     </div>
